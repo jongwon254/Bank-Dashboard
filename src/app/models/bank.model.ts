@@ -1,4 +1,4 @@
-export interface RootObject {
+export interface BankData {
     id: number;
     ip_address: string;
     account_number: string;
