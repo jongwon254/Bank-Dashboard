@@ -29,10 +29,11 @@ export class AppComponent implements OnInit {
 
   private getBankData(id: number) {
     this.bankApiService.getBankData(id)
-    .subscribe(
-      (response) => {
+    .subscribe((response) => {
         this.bankData = response;
         console.log(response);
+      }, (err) => {
+        alert(`No bank exists with ID ${id}`);
       }
     )
   }

@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-    --blue-1: #3C429E;
-    --blue-2: #4C52AD;
+    --blue-1: #2C3333;
+    --blue-2: #395B64;
     --yellow-1: #FAC742;
     --white: #FFF;
     --grey-1: #EDEDED;
+    --grey-2: #E7F6F2;
+    --blue-light: #A5C9CA;
     --shadow-dark: rgba(0,0,0,0.3);
     --shadow-light: rgba(255,255,255,0.1);
 }
@@ -28,7 +30,7 @@ body {
 }
 
 .container {
-    width: 400px;
+    width: 600px;
     height: 80vh;
     background-color: var(--blue-2);
     border-radius: 20px;
@@ -88,7 +90,7 @@ body {
 }
 
 .info-label {
-    color: var(--white);
+    color: var(--blue-light);
 }
 
 .info-container {
@@ -97,10 +99,10 @@ body {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     margin-top: 1em;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    border: 1px solid var(--blue-1);
 }
 
 .info-block {
@@ -111,27 +113,35 @@ body {
 
 .info-block-label {
     width: 50%;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid var(--blue-1);
 }
 
 .symbol {
-    width: 2em;
+    width: 2.5em;
+    margin-bottom: 10px;
 }
 
 .span {
-    color: var(--white);
+    color: var(--blue-light);
     font-size: 0.8em;
 }
 
 .info-block-value {
     width: 50%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    color: var(--white);
+    color: var(--grey-2);
+    font-weight: 400;
+    border-bottom: 1px solid var(--blue-1);
+    border-right: 1px solid var(--blue-1);
+    font-size: 15px;
+
 }
 
 .search {
@@ -140,11 +150,12 @@ body {
 }
 
 input {
-    background-color: var(--shadow-light);
+    background-color: var(--blue-light);
     outline: none;
     border: none;
     border-radius: 20px;
     padding: 1em;
-    color: var(--grey-1);
+    color: var(--blue-1);
     text-align: center;
+    width: 350px;
 }
