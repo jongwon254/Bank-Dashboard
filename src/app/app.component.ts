@@ -28,6 +28,10 @@ export class AppComponent implements OnInit {
     this.getBankData(this.id);
   }
 
+  inspect(id: number) {
+    this.getBankData(id);
+  }
+
   private getBankData(id: number) {
     this.bankApiService.getBankData(id)
     .subscribe((response) => {

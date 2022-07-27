@@ -17,8 +17,10 @@
 
       <div class="bank-item-value">
         account number: <br> {{ bankList[i].account_number }} 
+      </div>
 
-
+      <div class="inspect">
+        <button type="button" (click)="inspect(bankList[i].id)">Inspect</button>
       </div>
 
     </div>
