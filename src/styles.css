@@ -175,8 +175,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    
+    padding-left: 10px;
 }
 
 .symbol {
@@ -187,7 +186,6 @@ body {
 .span {
     color: var(--blue-1);
     font-size: 0.9em;
-    padding-left: 10px;
 }
 
 .info-block-value {
@@ -197,7 +195,7 @@ body {
     align-items: center;
     color: var(--grey-1);
     font-weight: 400;
-    font-size: 15px;
+    font-size: 20px;
 
 }
 
