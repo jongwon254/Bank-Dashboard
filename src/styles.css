@@ -140,7 +140,7 @@ body {
 }
 
 .bank-item-label {
-    width: 20%;
+    width: 30%;
     font-weight: 600;
     display: flex;
     flex-direction: column;
@@ -176,6 +176,7 @@ body {
     justify-content: center;
     align-items: center;
     
+    
 }
 
 .symbol {
@@ -184,8 +185,9 @@ body {
 }
 
 .span {
-    color: var(--grey-1);
-    font-size: 0.8em;
+    color: var(--blue-1);
+    font-size: 0.9em;
+    padding-left: 10px;
 }
 
 .info-block-value {
