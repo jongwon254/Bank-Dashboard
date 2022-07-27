@@ -17,14 +17,15 @@ export class AppComponent implements OnInit {
 
   id: number = 1;
   bankData?: BankData;
+  bankList?: BankData[];
 
   ngOnInit(): void {
-    this.getBankData(this.id)
-
+    this.getBankData(this.id);
+    this.getBanks();
   }
 
   onSubmit() {
-    this.getBankData(this.id)
+    this.getBankData(this.id);
   }
 
   private getBankData(id: number) {
@@ -36,5 +37,14 @@ export class AppComponent implements OnInit {
         alert(`No bank exists with ID ${id}`);
       }
     )
+  }
+
+  private getBanks() {
+    this.bankApiService.getBanks().subscribe((response) => {
+      this.bankList = response;
+      console.log(response)
+    }, (err) => {
+      alert("Error fetching banks.");
+    })
   }
 }

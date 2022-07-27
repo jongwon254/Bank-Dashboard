@@ -9,9 +9,15 @@ import { BankData } from '../models/bank.model';
 })
 export class BankApiService {
 
+  private _list: BankData[] = [];
+
   constructor(private http: HttpClient) { }
 
   getBankData(id: number): Observable<BankData> {
     return this.http.get<BankData>(environment.baseUrl + "/" + id)
+  }
+
+  getBanks(): Observable<BankData[]> {
+    return this.http.get<BankData[]>(environment.baseUrl)
   }
 }

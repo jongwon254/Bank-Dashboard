@@ -4,19 +4,19 @@
   </form>
 </div>
 
-<div class="card" *ngIf="bankData">
+<div class="card" *ngIf="bankList">
   <div class="list">
     <div class="bank-item-header">Bank List</div>
 
-    <div class="bank-item-block">
+    <div class="bank-item-block" *ngFor="let i of [0,1,2]">
 
       <div class="bank-item-label">
-        <img class="symbol" src="assets/img/block.png">
-        <span class="span">ID: {{ bankData.id }}</span>
+        <img class="symbol" src="assets/img/block.png" *ngIf="bankList[i]">
+        <span class="span">ID: {{ bankList[i].id }}</span>
       </div>
 
       <div class="bank-item-value">
-        account number: {{ bankData.account_number }} 
+        account number: <br> {{ bankList[i].account_number }} 
 
 
       </div>
@@ -51,6 +51,7 @@
           <div class="info-block-value">
             {{ bankData.account_number }}
           </div>
+          <hr style="border-color: rgb(161, 160, 160); border-style: solid">
         </div>
   
         <div class="info-block">
@@ -71,6 +72,7 @@
           <div class="info-block-value">
             {{ bankData.protocol }}
           </div>
+          <hr style="border-color: rgb(161, 160, 160); border-style: solid">
         </div>
   
         <div class="info-block">
@@ -91,6 +93,7 @@
           <div class="info-block-value">
             {{ bankData.transaction_fee }}
           </div>
+          <hr style="border-color: rgb(161, 160, 160); border-style: solid">
         </div>
   
         <div class="info-block">

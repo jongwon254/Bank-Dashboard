@@ -2,13 +2,14 @@
 
 :root {
     --blue-1: #2C3333;
-    --blue-2: #395B64;
+    --blue-2: #3e5d65;
     --yellow-1: #FAC742;
     --white: #FFF;
     --grey-1: #EDEDED;
     --grey-2: #E7F6F2;
-    --grey-3: #4B5D67;
-    --blue-light: #A5C9CA;
+    --grey-3: #495C83;
+    --green-1: #a3dee3;
+    --violet-light: #dad7ef;
     --shadow-dark: rgba(0,0,0,0.3);
     --shadow-light: rgba(255,255,255,0.1);
 }
@@ -33,13 +34,13 @@ body {
 .card {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: top;
     justify-content: center;
 }
 
 .list {
     width: 400px;
-    height: 60vh;
+    height: 30vh;
     background-color: var(--grey-3);
     margin-right: 30px;
     border-radius: 20px;
@@ -116,7 +117,7 @@ body {
 }
 
 .info-label {
-    color: var(--blue-light);
+    color: var(--white);
     font-size: 1.3em;
 }
 
@@ -127,13 +128,15 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: 1px solid var(--blue-1);
+    
+    border-radius: 20px;
 }
 
 .bank-item-block {
     width: 100%;
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;
 }
 
 .bank-item-label {
@@ -150,12 +153,13 @@ body {
 .bank-item-value {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    color: var(--grey-2);
-    font-weight: 400;
-    padding: 0;
-    padding-top: 10px;
+    color: var(--violet-light);
+    font-weight: 500;
+    padding-left: 30px;
+    padding-top: 11px;
+    font-size: 20px;
 }
 
 .info-block {
@@ -171,9 +175,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid var(--blue-1);
-    border-left: 1px solid var(--blue-1);
-    border-top: 1px solid var(--blue-1);
+    
 }
 
 .symbol {
@@ -182,7 +184,7 @@ body {
 }
 
 .span {
-    color: var(--blue-light);
+    color: var(--grey-1);
     font-size: 0.8em;
 }
 
@@ -191,27 +193,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--grey-2);
+    color: var(--grey-1);
     font-weight: 400;
-    border-bottom: 1px solid var(--blue-1);
-    border-right: 1px solid var(--blue-1);
-    border-top: 1px solid var(--blue-1);
     font-size: 15px;
 
 }
 
 .search {
     margin-bottom: 1em;
-    text-align: center;
+    padding-left: 555px;
 }
 
 input {
-    background-color: var(--blue-light);
+    background-color: var(--blue-2);
     outline: none;
     border: none;
     border-radius: 20px;
     padding: 1em;
-    color: var(--blue-1);
+    color: var(--white);
     text-align: center;
     width: 350px;
+    box-shadow: 10px 10px 10px var(--shadow-dark);
 }
