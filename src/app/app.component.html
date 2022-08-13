@@ -1,10 +1,14 @@
+<!-- Search component -->
 <div class="search">
   <form #form="ngForm" (submit)="onSubmit()">
     <input type="text" placeholder="Search ID" name="id" [(ngModel)]="id">
   </form>
 </div>
 
+<!-- Main component -->
 <div class="card" *ngIf="bankList">
+
+  <!-- Bank list component -->
   <div class="list">
     <div class="bank-item-header">Bank List</div>
 
@@ -22,11 +26,10 @@
       <div class="inspect">
         <button type="button" (click)="inspect(bankList[i].id)">Inspect</button>
       </div>
-
     </div>
-      
   </div>
   
+  <!-- Main bank component -->
   <div class="container" *ngIf="bankData">
     <div class="upper-data">
       <img class="main-image" src="assets/img/blockchain.jpg">
@@ -42,10 +45,9 @@
         Bank Information
       </div>
   
+      <!-- Display bank information -->
       <div class="info-container">
-  
         <div class="info-block">
-          
           <div class="info-block-label">
             <img class="symbol" src="assets/img/bank.png">
             <span class="span">account number</span>
@@ -113,91 +115,3 @@
     </div>
   </div>
 </div>
-
-
-
-<!-- <div class="container">
-  <div class="upper-data">
-    <img class="main-image" src="assets/img/blockchain.jpg">
-    
-    <div class="weather-data">
-      <div class="bank-id">ID</div>
-      <div class="bank-ip">IP ADDRESS</div>
-    </div>
-  </div>
-
-  <div class="lower-data">
-    <div class="info-label">
-      Bank Information
-    </div>
-
-    <div class="info-container">
-
-      <div class="info-block">
-        
-        <div class="info-block-label">
-          <img class="symbol" src="assets/img/bank.png">
-          <span class="span">account number</span>
-        </div>
-        <div class="info-block-value">
-          VALUE1
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-block-label">
-          <img class="symbol" src="assets/img/bank.png">
-          <span class="span">node identifier</span>
-        </div>
-        <div class="info-block-value">
-          VALUE2
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-block-label">
-          <img class="symbol" src="assets/img/bank.png">
-          <span class="span">protocol</span>
-        </div>
-        <div class="info-block-value">
-          VALUE3
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-block-label">
-          <img class="symbol" src="assets/img/bank.png">
-          <span class="span">port</span>
-        </div>
-        <div class="info-block-value">
-          VALUE4
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-block-label">
-          <img class="symbol" src="assets/img/bank.png">
-          <span class="span">transaction fee</span>
-        </div>
-        <div class="info-block-value">
-          VALUE4
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-block-label">
-          <img class="symbol" src="assets/img/bank.png">
-          <span class="span">trust</span>
-        </div>
-        <div class="info-block-value">
-          VALUE4
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</div>
--->
-
-<router-outlet></router-outlet>

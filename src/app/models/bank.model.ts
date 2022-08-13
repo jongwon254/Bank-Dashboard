@@ -1,3 +1,4 @@
+// Database model
 export interface BankData {
     id: number;
     ip_address: string;

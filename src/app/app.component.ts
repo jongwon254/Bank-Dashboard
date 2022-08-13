@@ -15,23 +15,28 @@ export class AppComponent implements OnInit {
 
   }
 
+  // variables
   id: number = 1;
   bankData?: BankData;
   bankList?: BankData[];
 
+  // initialize and fetch banks from API
   ngOnInit(): void {
     this.getBankData(this.id);
     this.getBanks();
   }
 
+  // method for search formular
   onSubmit() {
     this.getBankData(this.id);
   }
 
+  // method for inspect button in the list
   inspect(id: number) {
     this.getBankData(id);
   }
 
+  // get bank with ID from the API
   private getBankData(id: number) {
     this.bankApiService.getBankData(id)
     .subscribe((response) => {
@@ -43,6 +48,7 @@ export class AppComponent implements OnInit {
     )
   }
 
+  // get all banks from the API
   private getBanks() {
     this.bankApiService.getBanks().subscribe((response) => {
       this.bankList = response;
