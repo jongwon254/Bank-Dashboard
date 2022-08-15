@@ -17,8 +17,13 @@ export class AppComponent implements OnInit {
 
   // variables
   id: number = 1;
-  bankData?: BankData;
-  bankList?: BankData[];
+
+  readonly bank1: BankData = { id: 1, ip_address: "10.12.1.1", account_number: "da92e7eh", port: 80, node_identifier: "31idwoijd", version: "v1.0", protocol: "http", transaction_fee: 32, trust: 1 }
+  readonly bank2: BankData = { id: 2, ip_address: "26.21.23.2", account_number: "f00fed98", port: 80, node_identifier: "9jd83g4n", version: "v1.6", protocol: "http", transaction_fee: 10, trust: 12 }
+  readonly bank3: BankData = { id: 3, ip_address: "39.30.31.3", account_number: "dwd912df", port: 80, node_identifier: "0vue0lxn", version: "v3.1", protocol: "http", transaction_fee: 14, trust: 5 }
+  
+  bankData: BankData = this.bank3;
+  bankList: BankData[] = [this.bank1, this.bank2, this.bank3];
 
   // initialize and fetch banks from API
   ngOnInit(): void {
@@ -43,7 +48,7 @@ export class AppComponent implements OnInit {
         this.bankData = response;
         console.log(response);
       }, (err) => {
-        alert(`No bank exists with ID ${id}`);
+        //alert(`No bank exists with ID ${id}`);
       }
     )
   }
@@ -54,7 +59,7 @@ export class AppComponent implements OnInit {
       this.bankList = response;
       console.log(response)
     }, (err) => {
-      alert("Error fetching banks.");
+      //alert("Error fetching banks.");
     })
   }
 }
