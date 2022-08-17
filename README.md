@@ -17,7 +17,6 @@ Decentralized Banking Dashboard to manage and inspect information of banks from 
 - Users can select or search specific banks to inspect categories, such as account number, transaction fee, or trust score
 - A list shows the currently available banks with their ID and account number. Users can inspect a bank to display the bank on the main dashboard for more information 
 - The main dashboard consists of the bank information and a search function. It shows the ID, ip address, account number, node identifier, protocol, port, transaction fee, and trust details
-- Users can also search for specific banks by entering the ID in the search bar
 - It retrieves and displays information from the [Bank API](https://github.com/jongwon254/Decentralized-Bank-API)
 
 ## Screenshots
