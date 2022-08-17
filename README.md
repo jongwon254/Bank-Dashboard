@@ -22,10 +22,7 @@ Decentralized Banking Dashboard to manage and inspect information of banks from 
 
 ## Screenshots
 <img width="592" alt="b1" src="https://user-images.githubusercontent.com/36485235/185008917-c4016553-b1de-48a2-ba16-a4238e1ffa05.png">
-
-<img width="251" alt="b2" src="https://user-images.githubusercontent.com/36485235/185008956-13b4706b-0481-4767-ba35-c005755f35e8.png">
-<img width="353" alt="b3" src="https://user-images.githubusercontent.com/36485235/185008962-5a0616ec-e429-47b7-a588-e70a6c172d92.png">
-
+<img width="346" alt="b5copy" src="https://user-images.githubusercontent.com/36485235/185009268-1fa532c1-4f53-4eb9-96be-de3176628842.png">
 
 ## More Info
 [Visit Website](https://jongwonlee.dev/banks)
